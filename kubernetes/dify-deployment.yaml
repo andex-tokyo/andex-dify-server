@@ -1265,5 +1265,5 @@ spec:
     - name: dify-nginx
       port: 80
       targetPort: 80
-      nodePort: 30000
+      nodePort: 31345
 # Dify Nginx Server End
