@@ -2,8 +2,9 @@
   "extends": [
     "config:recommended"
   ],
-  "regexManagers": [
+  "customManagers": [
     {
+      "customType": "regex",
       "fileMatch": [
         "kubernetes/dify-deployment.yaml"
       ],
