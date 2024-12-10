@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "config:recommended"
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": [
+        "kubernetes/dify-deployment.yaml"
+      ],
+      "matchStrings": [
+        "image: langgenius/dify-web(?<currentValue>.*)"
+      ],
+      "datasourceTemplate": "github-tags",
+      "depNameTemplate": "langgenius/dify-web",
+      "versioningTemplate": "semver"
+    }
+  ],
+  "assignees": [
+    "andex-tokyo"
+  ]
+}
