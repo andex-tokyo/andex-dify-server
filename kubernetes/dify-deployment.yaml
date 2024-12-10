@@ -702,14 +702,14 @@ spec:
             - name: SECRET_KEY
               valueFrom:
                 secretKeyRef:
-                  name: dify-secrets
+                  name: dify-credentials
                   key: secret-key
             - name: CONSOLE_WEB_URL
               value: ""
             - name: INIT_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: dify-secrets
+                  name: dify-credentials
                   key: init-password
             - name: CONSOLE_API_URL
               value: ""
@@ -795,14 +795,14 @@ spec:
             - name: WEAVIATE_API_KEY
               valueFrom:
                 secretKeyRef:
-                  name: dify-secrets
+                  name: dify-credentials
                   key: weaviate-api-key
             - name: CODE_EXECUTION_ENDPOINT
               value: http://dify-sandbox:8194
             - name: CODE_EXECUTION_API_KEY
               valueFrom:
                 secretKeyRef:
-                  name: dify-secrets
+                  name: dify-credentials
                   key: code-execution-api-key
             - name: CODE_MAX_NUMBER
               value: "9223372036854775807"
@@ -898,7 +898,7 @@ spec:
             - name: SECRET_KEY
               valueFrom:
                 secretKeyRef:
-                  name: dify-secrets
+                  name: dify-credentials
                   key: secret-key
             - name: DB_USERNAME
               valueFrom:
@@ -975,7 +975,7 @@ spec:
             - name: WEAVIATE_API_KEY
               valueFrom:
                 secretKeyRef:
-                  name: dify-secrets
+                  name: dify-credentials
                   key: weaviate-api-key
             - name: SSRF_PROXY_HTTP_URL
               value: 'http://dify-ssrf:3128'
