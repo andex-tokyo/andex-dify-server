@@ -1,0 +1,3 @@
+resources:
+  - dify-deployment.yaml
+  - sealed-dify-secret.yaml
