@@ -960,7 +960,6 @@ spec:
             - name: VECTOR_STORE
               value: weaviate
             - name: WEAVIATE_HOST
-              value: dify-weaviate
               valueFrom:
                 secretKeyRef:
                   name: dify-credentials
