@@ -9,8 +9,8 @@
         "kubernetes/dify-deployment.yaml"
       ],
       "matchStrings": [
-        "image: langgenius/dify-web(?<currentValue>.*)",
-        "image: langgenius/dify-api(?<currentValue>.*)"
+        "image: langgenius/dify-web:(?<currentValue>.*)",
+        "image: langgenius/dify-api:(?<currentValue>.*)"
       ],
       "datasourceTemplate": "github-tags",
       "depNameTemplate": "langgenius/dify",
