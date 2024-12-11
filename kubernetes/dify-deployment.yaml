@@ -1051,6 +1051,14 @@ spec:
               value: "60000"
             - name: CSP_WHITELIST
               value: ""
+            - name: NOTION_INTEGRATION_TYPE
+              value: "internal"
+            - name: NOTION_INTERNAL_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: dify-credentials
+                  key: notion-internal-secret
+
           resources:
             requests:
               cpu: 100m
