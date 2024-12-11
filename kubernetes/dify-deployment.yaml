@@ -353,7 +353,10 @@ spec:
             - name: "AUTHENTICATION_APIKEY_ENABLED"
               value: "true"
             - name: "AUTHENTICATION_APIKEY_ALLOWED_KEYS"
-              value: "WVF5YThaHlkYwhGUSmCRgsX3tD5ngdN8pkih"
+              valueFrom:
+                secretKeyRef:
+                  name: dify-credentials
+                  key: weaviate-api-key
             - name: "AUTHENTICATION_APIKEY_USERS"
               value: "hello@dify.ai"
             - name: "AUTHORIZATION_ADMINLIST_ENABLED"
