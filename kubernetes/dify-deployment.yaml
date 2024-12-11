@@ -415,7 +415,10 @@ spec:
           image: langgenius/dify-sandbox:0.2.10
           env:
             - name: API_KEY
-              value: "dify-sandbox"
+              valueFrom:
+                secretKeyRef:
+                  name: dify-credentials
+                  key: code-execution-api-key
             - name: GIN_MODE
               value: "release"
             - name: WORKER_TIMEOUT
