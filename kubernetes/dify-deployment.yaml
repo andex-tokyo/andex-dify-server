@@ -831,6 +831,16 @@ spec:
               value: 'http://dify-ssrf:3128'
             - name: SSRF_PROXY_HTTPS_URL
               value: 'http://dify-ssrf:3128'
+            - name: AWS_ACCESS_KEY_ID
+              valueFrom:
+                  secretKeyRef:
+                    name: dify-credentials
+                    key: AWS_ACCESS_KEY_ID
+            - name: AWS_SECRET_ACCESS_KEY
+              valueFrom:
+                  secretKeyRef:
+                      name: dify-credentials
+                      key: AWS_SECRET_ACCESS_KEY
           resources:
             requests:
               cpu: 200m
