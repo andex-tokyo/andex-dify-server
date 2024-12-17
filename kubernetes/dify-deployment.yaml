@@ -699,7 +699,7 @@ spec:
             claimName: dify-api-storage
       containers:
         - name: dify-api
-          image: langgenius/dify-api:0.14.0
+          image: langgenius/dify-api:0.13.2
           env:
             - name: MODE
               value: api
@@ -900,7 +900,7 @@ spec:
             claimName: dify-api-storage
       containers:
         - name: dify-worker
-          image: langgenius/dify-api:0.14.0
+          image: langgenius/dify-api:0.13.2
           ports:
             - containerPort: 5001
               protocol: TCP
@@ -1051,7 +1051,7 @@ spec:
       automountServiceAccountToken: false
       containers:
         - name: dify-web
-          image: langgenius/dify-web:0.14.0
+          image: langgenius/dify-web:0.13.2
           env:
             - name: EDITION
               value: SELF_HOSTED
