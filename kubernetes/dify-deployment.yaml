@@ -396,8 +396,6 @@ metadata:
   namespace: dify
   labels:
     app: dify-sandbox
-  annotations:
-    instrumentation.opentelemetry.io/inject-python: "true"
 spec:
   replicas: 1
   revisionHistoryLimit: 1
@@ -408,6 +406,8 @@ spec:
     metadata:
       labels:
         app: dify-sandbox
+      annotations:
+        instrumentation.opentelemetry.io/inject-python: "true"
     spec:
       automountServiceAccountToken: false
       nodeSelector:
@@ -1040,8 +1040,6 @@ metadata:
   namespace: dify
   labels:
     app: dify-web
-  annotations:
-    instrumentation.opentelemetry.io/inject-nodejs: "true"
 spec:
   replicas: 1
   revisionHistoryLimit: 1
@@ -1052,6 +1050,8 @@ spec:
     metadata:
       labels:
         app: dify-web
+      annotations:
+        instrumentation.opentelemetry.io/inject-nodejs: "true"
     spec:
       nodeSelector:
         kubernetes.io/os: linux
