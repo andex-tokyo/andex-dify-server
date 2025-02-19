@@ -1296,4 +1296,21 @@ spec:
       port: 80
       targetPort: 80
       nodePort: 31345
-# Dify Nginx Server End
+
+
+---
+apiVersion: opentelemetry.io/v1alpha1
+kind: Instrumentation
+metadata:
+  name: dify-instrumentation
+  namespace: dify
+spec:
+  exporter:
+    endpoint: http://andex-signoz-otel-collector.signoz.svc.cluster.local:4317
+  propagators:
+    - tracecontext
+    - baggage
+    - b3
+  sampler:
+    type: parentbased_traceidratio
+    argument: "0.25"
