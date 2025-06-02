@@ -39,6 +39,85 @@
       "datasourceTemplate": "docker",
       "depNameTemplate": "langgenius/dify-sandbox",
       "versioningTemplate": "semver"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "kubernetes/dify-deployment.yaml"
+      ],
+      "matchStrings": [
+        "image: postgres:(?<currentValue>.*)"
+      ],
+      "datasourceTemplate": "docker",
+      "depNameTemplate": "postgres",
+      "versioningTemplate": "docker"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "kubernetes/dify-deployment.yaml"
+      ],
+      "matchStrings": [
+        "image: redis:(?<currentValue>.*)"
+      ],
+      "datasourceTemplate": "docker",
+      "depNameTemplate": "redis",
+      "versioningTemplate": "docker"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "kubernetes/dify-deployment.yaml"
+      ],
+      "matchStrings": [
+        "image: semitechnologies/weaviate:(?<currentValue>.*)"
+      ],
+      "datasourceTemplate": "docker",
+      "depNameTemplate": "semitechnologies/weaviate",
+      "versioningTemplate": "semver"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "kubernetes/dify-deployment.yaml"
+      ],
+      "matchStrings": [
+        "image: ubuntu/squid:(?<currentValue>.*)"
+      ],
+      "datasourceTemplate": "docker",
+      "depNameTemplate": "ubuntu/squid",
+      "versioningTemplate": "docker"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "kubernetes/dify-deployment.yaml"
+      ],
+      "matchStrings": [
+        "image: nginx:(?<currentValue>.*)"
+      ],
+      "datasourceTemplate": "docker",
+      "depNameTemplate": "nginx",
+      "versioningTemplate": "docker"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["postgres", "redis"],
+      "major": {
+        "enabled": false
+      }
+    },
+    {
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["semitechnologies/weaviate"],
+      "minor": {
+        "enabled": true
+      },
+      "major": {
+        "enabled": false
+      }
     }
   ],
   "assignees": [
