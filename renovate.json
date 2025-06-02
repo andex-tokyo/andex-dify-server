@@ -15,6 +15,30 @@
       "datasourceTemplate": "github-tags",
       "depNameTemplate": "langgenius/dify",
       "versioningTemplate": "semver"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "kubernetes/dify-deployment.yaml"
+      ],
+      "matchStrings": [
+        "image: langgenius/dify-plugin-daemon:(?<currentValue>.*)"
+      ],
+      "datasourceTemplate": "docker",
+      "depNameTemplate": "langgenius/dify-plugin-daemon",
+      "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(-local)?$"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "kubernetes/dify-deployment.yaml"
+      ],
+      "matchStrings": [
+        "image: langgenius/dify-sandbox:(?<currentValue>.*)"
+      ],
+      "datasourceTemplate": "docker",
+      "depNameTemplate": "langgenius/dify-sandbox",
+      "versioningTemplate": "semver"
     }
   ],
   "assignees": [
