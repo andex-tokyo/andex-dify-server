@@ -693,7 +693,7 @@ spec:
             claimName: dify-plugin-daemon-storage
       containers:
         - name: dify-plugin-daemon
-          image: langgenius/dify-plugin-daemon:0.1.2-local
+          image: langgenius/dify-plugin-daemon:0.1.3-local
           resources:
             limits:
               memory: "1024Mi"
