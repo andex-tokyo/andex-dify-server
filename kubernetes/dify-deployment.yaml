@@ -332,7 +332,7 @@ spec:
       serviceAccountName: dify-weaviate
       containers:
         - name: dify-weaviate
-          image: semitechnologies/weaviate:1.31.3
+          image: semitechnologies/weaviate:1.31.5
           ports:
             - containerPort: 8080
               name: weaviate-p
