@@ -203,7 +203,7 @@ spec:
       serviceAccountName: dify-redis
       containers:
         - name: dify-redis
-          image: redis:6-alpine
+          image: redis:7-alpine
           ports:
             - containerPort: 6379
               name: redis-p
